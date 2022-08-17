@@ -7,8 +7,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   padding: 5vmin;
-  background-color: var(--primary-color);
-  color: var(--fg-color, white);
+  // background-color: var(--primary-color);
+  // color: var(--fg-color, white);
 }
 
 a {
@@ -31,16 +31,29 @@ ul {
 .ball {
   height: 5vmin;
   width: 5vmin;
+  left: 50vw;
   border-radius: 50%;
   background: radial-gradient(circle at bottom right, #fb2324, #fe932a);
-  animation: slide-right var(--duration) var(--easing) infinite;
+  background: #fb2324;
+  transition-property: background, transform;
+  transition-duration: 1s, 3s;
+  transition-timing-function: linear, ease-in-out;
+  transition-duration: 0.5s;
+
+  &:hover {
+    transition-delay: 0.5s;
+    transition-duration: 1s, 3s;
+    background: blue;
+    transform: scale(2);
+  }
+  // animation: slide-right var(--duration) var(--easing) infinite;
 }
 
-@keyframes slide-right {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(50vw);
-  }
-}
+// @keyframes slide-right {
+//   from {
+//     transform: translateX(0);
+//   }
+//   to {
+//     transform: translateX(50vw);
+//   }
+// }
