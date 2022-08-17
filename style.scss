@@ -35,14 +35,14 @@ ul {
   border-radius: 50%;
   background: radial-gradient(circle at bottom right, #fb2324, #fe932a);
   background: #fb2324;
-  transition-property: background, transform;
-  transition-duration: 1s, 3s;
-  transition-timing-function: linear, ease-in-out;
-  transition-duration: 0.5s;
-
+  // transition-property: background, transform;
+  // transition-duration: 1s, 3s;
+  // transition-timing-function: linear, ease-in-out;
+  // transition-duration: 0.5s;
+  transition: all 1s 0.5s  ease-in-out;
   &:hover {
-    transition-delay: 0.5s;
-    transition-duration: 1s, 3s;
+    //  transition-delay: 0.5s;
+    // transition-duration: 1s, 3s;
     background: blue;
     transform: scale(2);
   }
