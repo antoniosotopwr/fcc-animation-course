@@ -35,19 +35,62 @@ ul {
   border-radius: 50%;
   background: radial-gradient(circle at bottom right, #fb2324, #fe932a);
   background: #fb2324;
-  // transition-property: background, transform;
-  // transition-duration: 1s, 3s;
-  // transition-timing-function: linear, ease-in-out;
-  // transition-duration: 0.5s;
-  transition: all 1s 0.5s  ease-in-out;
-  &:hover {
-    //  transition-delay: 0.5s;
-    // transition-duration: 1s, 3s;
-    background: blue;
-    transform: scale(2);
-  }
-  // animation: slide-right var(--duration) var(--easing) infinite;
+  animation-name: move-square, red-to-green;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
 }
+
+@keyframes move-square {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: translateX(20vw);
+  }
+  50% {
+    animation-timing-function: ease-in-out;
+    transform: translateX(20vw) translateY(10vw);
+  }
+  75% {
+    transform: translateX(0) translateY(10vw);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes red-to-green {
+  from{
+    background: red;
+  }
+  to{
+    background: aquamarine;
+  }
+  
+}
+
+// .ball {
+//   height: 5vmin;
+//   width: 5vmin;
+//   left: 50vw;
+//   border-radius: 50%;
+//   background: radial-gradient(circle at bottom right, #fb2324, #fe932a);
+//   background: #fb2324;
+//   // transition-property: background, transform;
+//   // transition-duration: 1s, 3s;
+//   // transition-timing-function: linear, ease-in-out;
+//   // transition-duration: 0.5s;
+//   transition: all 1s 0.5s  ease-in-out;
+//   &:hover {
+//     //  transition-delay: 0.5s;
+//     // transition-duration: 1s, 3s;
+//     background: blue;
+//     transform: scale(2);
+//   }
+//   // animation: slide-right var(--duration) var(--easing) infinite;
+// }
 
 // @keyframes slide-right {
 //   from {
