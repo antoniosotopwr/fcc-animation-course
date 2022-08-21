@@ -125,14 +125,15 @@ body {
   }
 }
 
-@keyframes good-job{
-  from, to{
+@keyframes good-job {
+  from,
+  to {
     transform: none;
   }
-  50%{
+  50% {
     transform: translateY(-100%);
   }
-  90%{
+  90% {
     transform: translateY(0) scaleY(0.8);
   }
 }
